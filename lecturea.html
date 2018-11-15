@@ -1,0 +1,142 @@
+<html>
+<head>
+<script type="text/javascript">
+	function selectAll(){
+			var items=document.getElementsByName('csc[]');
+				for(var i=0; i<items.length; i++){
+				if(items[i].type=='checkbox')
+				items[i].checked=true;
+			}
+		}
+			
+	function UnSelectAll(){
+		var items=document.getElementsByName('csc[]');
+			for(var i=0; i<items.length; i++){
+			if(items[i].type=='checkbox')
+			items[i].checked=false;
+				}
+			}			
+</script>
+<style>
+body
+{
+background-color:orange;
+}
+</style>
+</head>
+<body>
+<form action="attendance" method="get">
+<h3>comment:(any msg to students)</h3><br>
+<center>
+<textarea name="comments" value="comment" rows="10" cols="100"></textarea>
+</center>
+<h3>attedance:(absentees)<input type="button" onclick='selectAll()' value="Select All"/>
+		<input type="button" onclick='UnSelectAll()' value="Unselect All"/></h3>
+
+period:
+<select name="period" required>
+<option value="">select</option>
+<option value="9:30 am to 10:20 am">1st period</option>
+<option value="10:20 am to 11:10 am">2nd period</option>
+<option value="10:20 am to 12:10 pm">3rd period</option>
+<option value="12:10 pm to 1:00 pm">4th period</option>
+<option value="1:40 pm to 2:30 pm">5th  period</option>
+<option value="2:30 pm to 3:15 pm">6th period</option>
+<option value="3:15 pm to 4:00 pm">7th period</option>
+</select>
+
+
+<table border="2" cellpadding="10px">
+<td><h3>5c:</h3></td>
+<td><input type="checkbox" value="501" name="csc[]">501</td>
+<td><input type="checkbox" value="502" name="csc[]">502</td>
+<td><input type="checkbox" value="503" name="csc[]">503</td>
+<td><input type="checkbox" value="504" name="csc[]">504</td>
+<td><input type="checkbox" value="505" name="csc[]">505</td>
+<td><input type="checkbox" value="506" name="csc[]">506</td>
+<td><input type="checkbox" value="507" name="csc[]">507</td>
+<td><input type="checkbox" value="508" name="csc[]">508</td>
+<td colspan="3" align="center"><input type="checkbox" value="509" name="csc[]">509</td>
+</tr>
+
+<tr>
+<td><h3>5d:</h3></td>
+<td><input type="checkbox" value="510" name="csc[]">510</td>
+<td><input type="checkbox" value="511" name="csc[]">511</td>
+<td><input type="checkbox" value="512" name="csc[]">512</td>
+<td><input type="checkbox" value="513" name="csc[]">513</td>
+<td><input type="checkbox" value="514" name="csc[]">514</td>
+<td><input type="checkbox" value="515" name="csc[]">515</td>
+<td><input type="checkbox" value="516" name="csc[]">516</td>
+<td><input type="checkbox" value="517" name="csc[]">517</td>
+<td><input type="checkbox" value="518" name="csc[]">518</td>
+<td colspan="2" align="center"><input type="checkbox" value="519" name="csc[]">519</td>
+</tr>
+
+<tr>
+<td><h3>5e:</h3></td>
+<td><input type="checkbox" value="520" name="csc[]">520</td>
+<td><input type="checkbox" value="521" name="csc[]">521</td>
+<td><input type="checkbox" value="522" name="csc[]">522</td>
+<td><input type="checkbox" value="523" name="csc[]">523</td>
+<td><input type="checkbox" value="524" name="csc[]">524</td>
+<td><input type="checkbox" value="525" name="csc[]">525</td>
+<td><input type="checkbox" value="526" name="csc[]">526</td>
+<td><input type="checkbox" value="527" name="csc[]">527</td>
+<td><input type="checkbox" value="528" name="csc[]">528</td>
+<td colspan="2" align="center"><input type="checkbox" value="529" name="csc[]">529</td>
+</tr>
+
+<tr>
+<td><h3>5f:</h3></td>
+<td><input type="checkbox" value="530" name="csc[]">530</td>
+<td><input type="checkbox" value="531" name="csc[]">531</td>
+<td><input type="checkbox" value="532" name="csc[]">532</td>
+<td><input type="checkbox" value="533" name="csc[]">533</td>
+<td><input type="checkbox" value="534" name="csc[]">534</td>
+<td><input type="checkbox" value="535" name="csc[]">535</td>
+<td><input type="checkbox" value="536" name="csc[]">536</td>
+<td><input type="checkbox" value="537" name="csc[]">537</td>
+<td><input type="checkbox" value="538" name="csc[]">538</td>
+<td colspan="2" align="center"><input type="checkbox" value="539" name="csc[]">539</td>
+</tr>
+
+<tr>
+<td><h3>5g:</h3></td>
+<td><input type="checkbox" value="540" name="csc[]">540</td>
+<td><input type="checkbox" value="541" name="csc[]">541</td>
+<td><input type="checkbox" value="542" name="csc[]">542</td>
+<td><input type="checkbox" value="543" name="csc[]">543</td>
+<td><input type="checkbox" value="544" name="csc[]">544</td>
+<td><input type="checkbox" value="545" name="csc[]">545</td>
+<td><input type="checkbox" value="546" name="csc[]">546</td>
+<td><input type="checkbox" value="547" name="csc[]">547</td>
+<td><input type="checkbox" value="548" name="csc[]">548</td>
+<td colspan="3" align="center"><input type="checkbox" value="549" name="csc[]">549</td>
+</tr>
+
+<tr>
+<td><h3>5h:</h3></td>
+<td><input type="checkbox" value="550" name="csc[]">550</td>
+<td><input type="checkbox" value="551" name="csc[]">551</td>
+<td><input type="checkbox" value="552" name="csc[]">552</td>
+<td><input type="checkbox" value="553" name="csc[]">553</td>
+<td><input type="checkbox" value="554" name="csc[]">554</td>
+<td><input type="checkbox" value="555" name="csc[]">555</td>
+<td><input type="checkbox" value="556" name="csc[]">556</td>
+<td><input type="checkbox" value="557" name="csc[]">557</td>
+<td><input type="checkbox" value="558" name="csc[]">558</td>
+<td><input type="checkbox" value="559" name="csc[]">559</td>
+<td><input type="checkbox" value="560" name="csc[]">560</td>
+</tr>
+<tr>
+<td colspan="12" align="center"><input type="checkbox" value="All present" name="csc[]">NO _ABSENTEEEEZ</td>
+</tr>
+<center><input type="submit" value="save"></center>
+</br>
+<center><input type="reset" value="Edit"></center>
+
+</form>
+</table>
+</body>
+</html>

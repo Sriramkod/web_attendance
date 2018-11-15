@@ -1,0 +1,353 @@
+<html>
+
+<head>
+
+<title>QUIZ</title>
+
+<script language=JavaScript>
+
+var i=1, num_Of_Question=7;
+
+questions = new Array() 
+questions[1]="What is the first layer";
+
+questions[2] ="What is the second layer";
+
+questions[3] ="What is the third layer";
+
+questions[4] ="What is the fourth layer";
+
+questions[5] ="What is the fifth layer";
+
+questions[6] ="What is the sixth layer";
+
+questions[7] ="What is the seventh layer";
+
+
+answerA=new Array()
+answerA[1]="Application";
+
+answerA[2]="Presentation";
+answerA[3]="Session";
+
+answerA[4]="Transport";
+
+answerA[5]="Network";
+
+answerA[6]="Datalink";
+
+answerA[7]="Physical";
+
+
+answerB=new Array()
+answerB[1]="Session";
+
+answerB[2]="Application";
+
+answerB[3]="Physical";
+
+answerB[4]="Datalink";
+
+answerB[5]="Phsical";
+
+answerB[6]="Application";
+
+answerB[7]="Session";
+
+
+answerC=new Array()
+answerC[1]="Network";
+
+answerC[2]="Datalink";
+
+answerC[3]="Transport";
+
+answerC[4]="Presentation";
+
+answerC[5]="Datalink";
+
+answerC[6]="Presentation";
+
+answerC[7]="Phsical";
+
+
+rightAnswer=new Array()
+rightAnswer[1]=2;
+
+rightAnswer[2]=1;
+
+rightAnswer[3]=2;
+
+rightAnswer[4]=2;
+
+rightAnswer[5]=3;
+
+rightAnswer[6]=2;
+
+rightAnswer[7]=1;
+
+var score=0;
+
+function preQuestion()
+{
+
+var radios = document.getElementsByName("quiz");
+
+var option;
+
+    
+for (var j = 0; j < radios.length; j++) 
+{
+       
+        if (radios[j].checked) {
+
+           option=radios[j].value;
+
+		radios[j].checked=false;
+            
+break;
+
+        }
+
+    }
+
+	if(option==rightAnswer[i])
+
+	{
+		
+score=score+1;
+		
+
+	}
+	
+	
+i--;	
+	
+if(i==0)
+	{
+	
+alert("This is first Question");
+
+	i++;
+
+	}
+	
+	
+var x=document.getElementById('myTable').rows
+    	var y=x[0].cells
+    	y[0].innerHTML=i + ".\t";
+	y[1].innerHTML=questions[i];
+	getOptionA();
+
+}
+
+function nextQuestion()
+{
+
+
+var radios = document.getElementsByName("quiz");
+var option;
+
+   
+ for (var j = 0; j < radios.length; j++) {       
+
+        if (radios[j].checked) {
+          
+ 	option=radios[j].value;
+		
+radios[j].checked=false;
+   
+         	break;
+
+        }
+
+    }
+
+
+	if(option==rightAnswer[i])
+	
+{
+		
+score=score+1;
+
+		
+	}
+	
+i++;
+	
+if(i>num_Of_Question)
+
+	{
+
+	alert("This is last Question");
+
+	i--;
+
+	}	
+
+	var x=document.getElementById('myTable').rows
+    	var y=x[0].cells
+    	y[0].innerHTML=i + ".\t";
+	y[1].innerHTML=questions[i];
+	
+getOptionA();
+
+}
+
+function getOptionA()
+
+{
+
+var x=document.getElementById('myTable').rows
+    	var y=x[1].cells
+    	y[1].innerHTML=answerA[i];
+getOptionB();
+}
+
+function getOptionB()
+
+{
+
+var x=document.getElementById('myTable').rows
+    	var y=x[2].cells
+    	y[1].innerHTML=answerB[i];
+getOptionC();
+}
+
+function getOptionC()
+
+{
+
+var x=document.getElementById('myTable').rows
+    	var y=x[3].cells
+    	y[1].innerHTML=answerC[i];
+}
+
+function showScore() //score is updated only after clicking next or previous button not by clicking the answer and checking in order to know whether your answer is correct or not.
+{
+var radios = document.getElementsByName("quiz");
+
+
+
+for (var j = 0; j < radios.length; j++) 
+{       
+        
+     
+      
+		radios[j].checked=false;
+    
+    
+    }
+
+ alert("Your score is "+ score);
+
+}
+
+
+
+</script>
+
+<style>
+form{
+padding-top:50;
+padding-left:300;
+}
+</style>
+</head>
+
+
+<body>
+
+<center><h1 style="color:blue;">QUIZ OF THE DAY<hr /></h1></center>
+<form name=first method=post style="width:800px; height:500px; color:blue" action="first">
+
+<fieldset>
+<legend align=center><h1 style="color:gray;"> COMPUTER NETWORKS</h1></legend>
+
+
+
+<table id=myTable style=" color:blue;">
+
+
+<tr>
+
+<td >
+<script language=JavaScript>
+//var i=1;
+document.write(i + ".\t");
+
+</script>
+
+</td>
+
+<td>
+
+<script language=JavaScript>
+document.write(questions[i]);
+</script>
+
+
+</td>
+
+</tr>
+
+<tr>
+<td>
+
+<input type = "radio" value="1" name = "quiz">
+</td>
+
+<td>
+
+<script language=JavaScript>
+document.write(answerA[i]);
+</script>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<input type = "radio" value ="2" name = "quiz">
+
+</td>
+<td>
+
+<script language=JavaScript>
+document.write(answerB[i]);
+</script>
+</td>
+</tr>
+
+<tr>
+
+<td>
+
+<input type = "radio" value ="3" name = "quiz">
+</td>
+
+<td>
+
+<script language=JavaScript>
+document.write(answerC[i]);
+</script>
+</td>
+</tr>
+
+<tr>
+<!__<input type=button value=Quit onclick=quit()>
+</tr></table>
+
+<a href=javascript:preQuestion();> 
+<img src=GREEN2.jpg  style="position:relative;left:120px" width=50 height=50>	
+
+<a href=javascript:nextQuestion();>
+<img src=GREEN.JPG  style="position:relative; left:250px" width=50 height=50>
+</a>
+<input type="submit" value="Done" value="Submit" style="position:relative;bottom:20px;left:100px;" width=50 height=200>	
+
+</form>
+</body>
+</html>
+
+

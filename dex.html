@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("email1.jpg");
+background-repeat:no-repeat;
+}
+#id1{
+padding-top:80;
+color:blue;
+}
+table{
+padding-top:100;
+}
+</style>
+</head>
+<body><center><h3 id="id1"><i>Your attendance has been updated</i></h3></center>
+<center>
+<form action="mail" method="post">
+<table>
+  <tr><td>To:</td><td><input type="text" name="to" value="peddi.shashank6@gmail.com"></td></tr>
+ <tr><td>Subject:</td><td><input type="text" name="subject" ></td></tr>
+ <tr><td>Message:</td><td><input type="text" name="message"  required></td></tr>
+  <tr><td>Your Email id:</td><td><input type="email" name="user" required></td></tr>
+  <tr><td>Password</td><td><input type="password" name="pass" required></td></tr>
+ <tr><td><input type="submit" value="send" /></td></tr>
+</table>
+</form>
+</center>
+<p>NOTE:
+To send mail plz allow the permission</p>
+</body>
+</html>

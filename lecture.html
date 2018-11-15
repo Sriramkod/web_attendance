@@ -1,0 +1,188 @@
+<html>
+<head>
+
+<script type="text/javascript">
+	function selectAll(){
+			var items=document.getElementsByName('csc[]');
+				for(var i=0; i<items.length; i++){
+				if(items[i].type=='checkbox')
+				items[i].checked=true;
+			
+			
+
+				}
+			
+		}
+			
+	function UnSelectAll(){
+		var items=document.getElementsByName('csc[]');
+			for(var i=0; i<items.length; i++){
+			if(items[i].type=='checkbox')
+			items[i].checked=false;
+				}
+			}			
+
+</script>
+<style>
+body
+{
+background-color:hotpink;
+
+border:2px solid green;
+
+}
+table{
+border:5px ;
+border:10px dotted blue;
+background-color: rgba(0,0,0,0.5);
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-top: 50px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 10px;
+  -webkit-border-color: 15px;
+  -moz-border-color: 15px;
+  -ms-border-color: 15px;
+  -o-border-color: 15px;
+  /*border-color: 15px;*/
+  color:white;
+  font-weight: bolder;
+  -webkit-box-shadow: inset -4px -4px rgba(0,0,0,0.5);
+  box-shadow: inset -4px -4px rgba(0,0,0,0.5);
+  font-size: 18px;
+
+}
+td{
+color:black;
+}
+a{
+text-decoration:none;
+}
+</style>
+</head>
+<body>
+<form action="attendance" method="get">
+<p align="right"><button><a href="logout.java">logout</a>
+</button>
+</p>
+<p align="right"><button><a href="profile.java">profile</a>
+</button>
+</p>
+
+<h3>
+   Comment:(any msg to students)</h3><br>
+<center>
+<textarea name="comments" value="comment" rows="10" cols="100" placeholder='                      you comment only 100 characters'></textarea>
+</center>
+
+<h3>   Attedance:  <input type="button" onclick='selectAll()' value="Select All"/>
+		<input type="button" onclick='UnSelectAll()' value="Unselect All"/></h3>
+		</h3>
+<h1></h1>
+
+<p>  Note:Don't forget to choose your period</p>
+<b>  Period</b>:
+<select name="period" required>
+<option value="">select</option>
+<option value="1">1st period</option>
+<option value="2">2nd period</option>
+<option value="3">3rd period</option>
+<option value="4">4th period</option>
+<option value="5">5th  period</option>
+<option value="6">6th period</option>
+<option value="7">7th period</option>
+</select>
+<center>
+<table border="2" cellpadding="10px">
+<tr><td colspan="11"><center><b>Tick for those students who are absent<center></b></td></tr>
+<td><h3>5C:</h3></td>
+<td><input type="checkbox" value="5c1" name="csc[]">5c1</td>
+<td><input type="checkbox" value="5c2" name="csc[]">5c2</td>
+<td><input type="checkbox" value="5c3" name="csc[]">5c3</td>
+<td><input type="checkbox" value="5c4" name="csc[]">5c4</td>
+<td><input type="checkbox" value="5c5" name="csc[]">5c5</td>
+<td><input type="checkbox" value="5c6" name="csc[]">5c6</td>
+<td><input type="checkbox" value="5c7" name="csc[]">5c7</td>
+<td><input type="checkbox" value="5c8" name="csc[]">5c8</td>
+<td colspan="2" align="center"><input type="checkbox" value="5c9" name="csc[]">5c9</td>
+</tr>
+
+<tr>
+<td><h3>5D:</h3></td>
+<td><input type="checkbox" value="5d0" name="csc[]">5d0</td>
+<td><input type="checkbox" value="5d1" name="csc[]">5d1</td>
+<td><input type="checkbox" value="5d2" name="csc[]">5d2</td>
+<td><input type="checkbox" value="5d3" name="csc[]">5d3</td>
+<td><input type="checkbox" value="5d4" name="csc[]">5d4</td>
+<td><input type="checkbox" value="5d5" name="csc[]">5d5</td>
+<td><input type="checkbox" value="5d6" name="csc[]">5d6</td>
+<td><input type="checkbox" value="5d7" name="csc[]">5d7</td>
+<td><input type="checkbox" value="5d8" name="csc[]">5d8</td>
+<td ><input type="checkbox" value="5d9" name="csc[]">5d9</td>
+</tr>
+
+<tr>
+<td><h3>5E:</h3></td>
+<td><input type="checkbox" value="5e0" name="csc[]">5e0</td>
+<td><input type="checkbox" value="5e1" name="csc[]">5e1</td>
+<td><input type="checkbox" value="5e2" name="csc[]">5e2</td>
+<td><input type="checkbox" value="5e3" name="csc[]">5e3</td>
+<td><input type="checkbox" value="5e4" name="csc[]">5e4</td>
+<td><input type="checkbox" value="5e5" name="csc[]">5e5</td>
+<td><input type="checkbox" value="5e6" name="csc[]">5e6</td>
+<td><input type="checkbox" value="5e7" name="csc[]">5e7</td>
+<td><input type="checkbox" value="5e8" name="csc[]">5e8</td>
+<td><input type="checkbox" value="5e9" name="csc[]">5e9</td>
+</tr>
+
+<tr>
+<td><h3>5F:</h3></td>
+<td><input type="checkbox" value="5f0" name="csc[]">5f0</td>
+<td><input type="checkbox" value="5f1" name="csc[]">5f1</td>
+<td><input type="checkbox" value="5f2" name="csc[]">5f2</td>
+<td><input type="checkbox" value="5f3" name="csc[]">5f3</td>
+<td><input type="checkbox" value="5f4" name="csc[]">5f4</td>
+<td><input type="checkbox" value="5f5" name="csc[]">5f5</td>
+<td><input type="checkbox" value="5f6" name="csc[]">5f6</td>
+<td><input type="checkbox" value="5f7" name="csc[]">5f7</td>
+<td><input type="checkbox" value="5f8" name="csc[]">5f8</td>
+<td><input type="checkbox" value="5f9" name="csc[]">5f9</td>
+</tr>
+
+<tr>
+<td><h3>5G:</h3></td>
+<td><input type="checkbox" value="5g1" name="csc[]">5g0</td>
+<td><input type="checkbox" value="5g1" name="csc[]">5g1</td>
+<td><input type="checkbox" value="5g2" name="csc[]">5g2</td>
+<td><input type="checkbox" value="5g3" name="csc[]">5g3</td>
+<td><input type="checkbox" value="5g4" name="csc[]">5g4</td>
+<td><input type="checkbox" value="5g5" name="csc[]">5g5</td>
+<td><input type="checkbox" value="5g6" name="csc[]">5g6</td>
+<td><input type="checkbox" value="5g7" name="csc[]">5g7</td>
+<td><input type="checkbox" value="5g8" name="csc[]">5g8</td>
+<td><input type="checkbox" value="5g9" name="csc[]">5g9</td>
+</tr>
+
+<tr>
+<td><h3>5H:</h3></td>
+<td><input type="checkbox" value="5h1" name="csc[]">5h0</td>
+<td><input type="checkbox" value="5h1" name="csc[]">5h1</td>
+<td><input type="checkbox" value="5h2" name="csc[]">5h2</td>
+<td><input type="checkbox" value="5h3" name="csc[]">5h3</td>
+<td><input type="checkbox" value="5h4" name="csc[]">5h4</td>
+<td><input type="checkbox" value="5h5" name="csc[]">5h5</td>
+<td><input type="checkbox" value="5h6" name="csc[]">5h6</td>
+<td ><input type="checkbox" value="575" name="csc[]">575</td>
+<td colspan="2" align="center"><input type="checkbox" value="All present" name="csc[]">no_abs</td>
+
+</tr>
+<center><input type="submit" value="save"></center>
+</br>
+<center><input type="reset" value="Edit"></center>
+
+</form>
+</center>
+</table>
+</body>
+</html>

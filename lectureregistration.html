@@ -1,0 +1,109 @@
+<html>
+<head>
+<style>
+table{
+padding-top:300;
+padding-left:680;
+background-color: rgba(0,0,0,0.5);
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-top: 140px;
+padding-left: 500px;padding-right: 500px;
+padding-bottom: 140px;
+  -webkit-border-color: 15px;
+  -moz-border-color: 15px;
+  -ms-border-color: 15px;
+  -o-border-color: 15px;
+  border-color: 15px;
+  color:white;
+  font-weight: bolder;
+  -webkit-box-shadow: inset -4px -4px rgba(0,0,0,0.5);
+  box-shadow: inset -4px -4px rgba(0,0,0,0.5);
+  font-size: 18px;
+
+color:red;
+bgcolor:orange;
+}
+body{
+background:url("sai.png");
+background-size:100% 100%;
+background-repeat:no-repeat;
+}
+h3{
+color:orange;
+}
+tr{
+color:#F0FFF0;
+}
+</style>
+
+</head>
+<body style="background-color:lightgrey;">
+<form action="www.lectureregistration.com"  method="get" name="StudentRegistration" onsubmit="return(branch());">
+<table cellpadding="2" width="15" align="center" cellspacing="2">
+
+
+<tr>
+<td colspan=2>
+<center><font size=4><b>Lecture Registration Form</b></font></center>
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td id="id1"><input type="text" name="tf1" placeholder="Name must be minimum 9 characters" size="30" pattern="[a-z,0-9,A-Z].{8,}" required></td>
+</tr>
+
+<tr>
+<td>USER</td>
+<td><input type="text" name="tf2" size="30" pattern="[A-Z,a-z,0-9].{5,}" required></td>
+</tr>
+
+<td>Password</td>
+<td><input type="text" name="tf3" size="30" pattern=".{6,}" required></td>
+</tr>
+
+
+<tr>
+<td>Branch</td>
+<td><select  name="tf4" required>
+<option value="" selected>select..</option>
+<option value="CSE">CSE</option>
+<option value="ECE">ECE</option>
+<option value="EEE">EEE</option>
+<option value="ME">ME</option>
+<option value="CE">CE</option>
+</select></td>
+</tr>
+
+<tr>
+<td>Course</td>
+<td><select name="tf5" required>
+<option value="" selected>select..</option>
+<option value="B.Tech">B.TECH</option>
+<option value="MCA">MCA</option>
+<option value="MBA">MBA</option>
+<option value="BCA">BCA</option>
+</select></td>
+</tr>
+
+<tr>
+<td>EmailId</td>
+<td><input type="text" name="tf6" size="30"  pattern="[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></td>
+</tr>
+
+<tr>
+<td>Phone number</td>
+<td><input type="text" name="tf7" size="30" pattern="[0-9].{9,}" required></td>
+</tr>
+
+<tr>
+<td><input type="reset"></td>
+<td colspan="2"><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+<p>NOTE:<br>
+name should be atleast 5 alphbets<br>user name least</p>
+</body>
+</html>

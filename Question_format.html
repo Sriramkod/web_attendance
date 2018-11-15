@@ -1,0 +1,237 @@
+<html>
+<title>Quize application in jsp</title>
+<head>
+
+<script>
+
+function validateForm(theForm){
+
+if(theForm.quest.value==""){
+alert("Please enter Question.");
+theForm.quest.focus();
+return false;
+}
+
+return true;
+} 
+
+</script>
+<style>
+body
+{
+background-color:grey;
+}
+tr,td{
+color:black;
+font-size:18px;
+}
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color:black;
+  background-color:red;
+  border: none;
+  border-radius: 15px;
+  //box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: orange}
+
+.button:active {
+  background-color: green;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+
+<body>
+<br>
+<br/>
+<center>
+
+
+<tr>
+<td width="100%">
+<form method="POST" action="ques" onsubmit="return validateForm(this);">
+
+<h2 align="center"><font color="white">Enter the questions </font></h2>
+<table border="0" width="400px" cellspacing="2" cellpadding="4" id="id1">
+<tr>
+<td><h3>Enter the code</h3><input type="number" name="code" required></td>
+</tr>
+<tr><td><td>Question 1:</td></td></tr>
+<tr>
+
+<td width="50%"><b>Enter Question:</b></td>
+	<td width="50%"><input type="text" name="quest1" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(A.):</b></td>
+	<td width="50%"><input type="text" name="O1A" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(B.):</b></td>
+	<td width="50%"><input type="text" name="O1B" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(C.):</b></td>
+	<td width="50%"><input type="text" name="O1C" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(D.):</b></td>	
+	<td width="50%"><input type="text" name="O1D" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Correct Answer:</b></td>
+	<td width="50%"><input type="text" id="input"  name="Ans1" size="10" required> </td>
+</tr> 
+
+<tr><td><td>Question 2:</td></td></tr>
+<tr>
+	<td width="50%"><b>Enter Question:</b></td>
+	<td width="50%"><input type="text" name="quest2" size="40"/> </td>
+</tr>
+<tr>	
+	<td width="50%"><b>Enter Answer(A.):</b></td>
+	<td width="50%"><input type="text" name="O2A" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(B.):</b></td>
+	<td width="50%"><input type="text" name="O2B" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(C.):</b></td>
+	<td width="50%"><input type="text" name="O2C" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(D.):</b></td>
+	<td width="50%"><input type="text" name="O2D" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Correct Answer:</b></td>
+	<td width="50%"><input type="text" name="Ans2" size="10" required> </td>
+</tr> 
+
+<tr><td><td>Question 3:</td></td></tr>
+<tr>
+	<td width="50%"><b>Enter Question:</b></td>
+	<td width="50%"><input type="text" name="quest3" size="40"/> </td>
+</tr>
+<tr>	
+	<td width="50%"><b>Enter Answer(A.):</b></td>
+	<td width="50%"><input type="text" name="O3A" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(B.):</b></td>
+	<td width="50%"><input type="text" name="O3B" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(C.):</b></td>
+	<td width="50%"><input type="text" name="O3C" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(D.):</b></td>
+	<td width="50%"><input type="text" name="O3D" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Correct Answer:</b></td>
+	<td width="50%"><input type="text" name="Ans3" size="10" required> </td>
+</tr> 
+
+
+
+
+
+
+<tr><td><td>Question 4:</td></td></tr>
+<tr>
+	<td width="50%"><b>Enter Question:</b></td>
+	<td width="50%"><input type="text" name="quest4" size="40"/> </td>
+</tr>
+<tr>	
+	<td width="50%"><b>Enter Answer(A.):</b></td>
+	<td width="50%"><input type="text" name="O4A" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(B.):</b></td>
+	<td width="50%"><input type="text" name="O4B" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(C.):</b></td>
+	<td width="50%"><input type="text" name="O4C" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(D.):</b></td>
+	<td width="50%"><input type="text" name="O4D" size="40" required> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Correct Answer:</b></td>
+	<td width="50%"><input type="text" name="Ans4" size="10"/> </td>
+</tr> 
+
+
+
+
+
+<tr><td><td>Question 5:</td></td></tr>
+<tr>
+	<td width="50%"><b>Enter Question:</b></td>
+	<td width="50%"><input type="text" name="quest5" size="40"/> </td>
+</tr>
+<tr>	
+	<td width="50%"><b>Enter Answer(A.):</b></td>
+	<td width="50%"><input type="text" name="O5A" size="40"/> </td>
+</tr>
+<tr>
+	<td width="50%"><b>Enter Answer(B.):</b></td>
+	<td width="50%"><input type="text" name="O5B" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(C.):</b></td>
+	<td width="50%"><input type="text" name="O5C" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Enter Answer(D.):</b></td>
+	<td width="50%"><input type="text" name="O5D" size="40"/> </td>
+</tr>
+
+<tr>
+	<td width="50%"><b>Correct Answer:</b></td>
+	<td width="50%"><input type="text" name="Ans5" size="10" required> </td>
+</tr> 
+
+
+
+
+</table>
+<center>
+<p><button class="button" type="submit"  name="submit"><b>save</b></button>
+<button class="button" type="Reset" name="reset"><b>Reset</b></button></p>
+</center> 
+</form>
+</td>
+</tr>
+
+</center>
+</body>
+</html>
